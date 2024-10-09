@@ -1,0 +1,108 @@
+/* Add Blog Content Wrapper */
+.add-blog-content-wrapper {
+    background-color: #ffffff;
+    padding: 15px; /* Reduced padding */
+    border-radius: 8px;
+    box-shadow: 0 2px 2px #ffffff;
+    width: 100%;   
+    height: fit-content;
+    max-width: 750px;
+    margin: 20px auto;
+}
+.alert {
+    background-color: #42c871;
+    text-align: center;
+    color: #f5f5f5;
+
+
+}
+.add-blog-heading {
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 4px solid #007bff;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Add Blog Form Container */
+.add-blog-form-container {
+    background-color: #ffffff;
+    padding: 20px; /* Reduced padding */
+    border-radius: 12px;
+    height: auto;
+    transition: padding 0.3s ease-in-out, width 0.3s ease-in-out;
+    overflow: auto;
+}
+
+/* Add Blog Form */
+.add-blog-form {
+    margin-top: 5px; /* Reduced margin */
+}
+
+.add-blog-form .form-group {
+    margin-bottom: 5px; /* Reduced margin */
+}
+
+.add-blog-form .form-control, .add-blog-form .form-control-file {
+    border-radius: 4px;
+    box-shadow: none;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.add-blog-form .form-control:focus, .add-blog-form .form-control-file:focus {
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.add-blog-form .btn {
+    background-color: #007bff;
+    border-color: #007bff;
+    font-weight: 500;
+    position: relative;
+    border-radius: 6px;
+    padding: 8px 24px; /* Reduced padding */
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.add-blog-form .btn:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+.add-blog-form .btn-danger {
+    background-color: #f94d5e;
+    border-color: #f94d5e;
+    font-weight: 100;
+    border-radius: 5px;
+    padding: 3px 3px; /* Reduced padding */
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.add-blog-form .btn-danger:hover {
+    background-color: #f21e33;
+    border-color: #f21e33;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .add-blog-form-container {
+        padding: 15px; /* Reduced padding */
+    }
+}
+
+/* Existing CSS styles are maintained */
+
+.form-group {
+    margin-bottom: 15px; /* Ensure sufficient spacing between form elements */
+}
+
+.form-check {
+    margin-bottom: 10px; /* Space between the radio buttons and the submit button */
+}
+
+.form-check-input {
+    margin-right: 10px; /* Space between radio button and its label */
+}
+
+.form-check-label {
+    margin-right: 20px; /* Space between radio button options */
+}

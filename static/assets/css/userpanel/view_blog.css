@@ -1,0 +1,165 @@
+body {
+    background-color: #f8f8f8;
+    /* Removed flex properties to prevent unintended layout issues */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: white;
+    width: 90%;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 40px auto; /* Center the container */
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    height: auto;
+}
+
+.header_1 {
+    background-color: #007bff;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.header_1 h1 {
+    font-size: 38px;
+}
+
+.header_1 .meta {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.admin-actions .justify-content-center {
+    display: flex; /* Ensure proper alignment with Bootstrap */
+    justify-content: center;
+    gap: 10px; /* Add spacing between buttons */
+}
+
+.content {
+    padding: 20px;
+    color: #333;
+}
+
+.content img {
+    width: 100%;
+    max-width: 600px; /* Limit maximum width for better responsiveness */
+    border-radius: 10px;
+    margin: 0 auto; /* Center the image */
+    display: block;
+}
+
+.headline {
+    margin: 20px 0;
+    font-size: 22px;
+    color: #007bff;
+    text-align: center;
+}
+
+.headline::before,
+.headline::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: #007bff;
+    margin: 10px auto;
+    width: 50px;
+}
+
+.continue-reading {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.comments {
+    padding: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.comments h2 {
+    margin-top: 0;
+    font-size: 18px;
+}
+
+.comment {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.comment .author {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.comment .text {
+    margin-top: 5px;
+}
+
+.comment-actions {
+    margin-top: 5px;
+}
+
+.comment-actions .btn {
+    margin-right: 5px;
+}
+
+.leave-reply {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.leave-reply h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.leave-reply .form-group {
+    margin-bottom: 15px;
+}
+
+.leave-reply label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.leave-reply input,
+.leave-reply textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.leave-reply input[type="checkbox"] {
+    width: auto;
+}
+
+.leave-reply .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.leave-reply .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Messages container styling */
+

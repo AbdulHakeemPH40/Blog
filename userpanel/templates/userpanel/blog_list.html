@@ -1,0 +1,49 @@
+{% extends 'userpanel/user_base.html' %}
+{% load static %}
+{% block title %}
+    Home | Blog List
+{% endblock %}
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'assets/css/sitevisitor/mystyle.css' %}">
+{% endblock %}
+<div class="messages-container">
+    {% if messages %}
+        <div class="messages mt-2">
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+</div>
+{% block content %}
+<div class="projcard-container">
+    {% for blog in Blog %}
+    <div class="projcard {% cycle 'projcard-blue' 'projcard-red' 'projcard-green' 'projcard-customcolor' %}">
+        <div class="projcard-innerbox">
+            {% if blog.blog_image %}
+            <img class="projcard-img" src="{{ blog.blog_image.url }}" alt="{{ blog.title }}" />
+            {% comment %} {% else %}
+            <img class="projcard-img" src="{% static 'assets/image/default_blog.jpg' %}" alt="{{ blog.title }}" /> {% endcomment %}
+            {% endif %}
+            <div class="projcard-textbox">
+                <div class="projcard-title">{{ blog.title|truncatechars:40 }}</div>
+                <div class="projcard-subtitle">
+                    By <a href="{% url 'view_user_profile' blog.author.id %}">{{ blog.author.username }}</a> on {{ blog.created_at|date:"F j, Y" }}
+                </div>
+                <div class="projcard-bar"></div>
+                <div class="projcard-description">{{ blog.content|safe }}</div>
+                <div class="projcard-tagbox">
+                    <!-- Add tags or categories here if you have them -->
+                </div>
+                <a href="{% url 'view_blog' blog.id %}" class="btn btn-primary">Continue Reading</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

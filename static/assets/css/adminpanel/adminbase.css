@@ -1,0 +1,236 @@
+/* General Styles */
+body {
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-fluid {
+    flex: 1;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #343a40;
+    position: fixed;
+}
+
+.navbar .profile-picture {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+
+.navbar .dropdown-menu {
+    left: auto;
+    right: 0;
+}
+
+.dropdown-menu-right .dropdown-item {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-menu-right .dropdown-item i {
+    margin-right: 10px;
+}
+
+/* Sidebar */
+#sidebar-left {
+    position: fixed;
+    top: 56px; /* Height of the navbar */
+    left: 0;
+    width: 220px;
+    height: calc(100% - 56px);
+    overflow-y: auto;
+    background-color: #222;
+    color: #fff;
+    padding-top: 20px;
+    border-right: 2px solid #444;
+    transition: width 0.3s, padding 0.3s, font-size 0.3s;
+}
+
+#sidebar-left .sidebar-inner {
+    padding: 10px;
+}
+
+#sidebar-left .nav-link {
+    color: #ddd;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    transition: padding 0.3s, font-size 0.3s;
+}
+
+#sidebar-left .nav-link i {
+    margin-right: 10px;
+}
+
+#sidebar-left .nav-link:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+#sidebar-left .nav-link.active {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 220px; /* Adjust according to sidebar width */
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 750px; /* Adjust width for responsiveness */
+    margin: auto;
+    transition: padding 0.3s ease-in-out, width 0.3s ease-in-out;
+    overflow: auto;
+}
+
+.content-wrapper h2 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #ddd;
+    padding: 20px 0;
+    width: 100%;
+    border-top: 2px solid #444;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Profile */
+.navbar .profile-picture, .navbar-brand img {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 992px) {
+    #sidebar-left {
+        width: 200px;
+    }
+
+    .main-content {
+        margin-left: 220px;
+    }
+
+    .content-wrapper {
+        padding: 15px;
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 768px) {
+    #sidebar-left {
+        width: 180px;
+    }
+
+    .main-content {
+        margin-left: 200px;
+    }
+
+    .content-wrapper {
+        padding: 10px;
+        max-width: 650px;
+    }
+
+    #sidebar-left .nav-link {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+
+    .content-wrapper {
+        max-width: 400px; /* Adjust max width for small screens */
+    }
+}
+
+@media (max-width: 576px) {
+    #sidebar-left {
+        width: 150px;
+    }
+
+    .main-content {
+        margin-left: 170px;
+    }
+
+    #sidebar-left .nav-link {
+        padding: 8px 10px;
+        font-size: 0.8rem;
+    }
+
+    .navbar .form-inline {
+        display: none; /* Hide search bar on small screens */
+    }
+
+    .content-wrapper {
+        max-width: 300px; /* Adjust max width for very small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #sidebar-left {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    .content-wrapper {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .navbar .navbar-brand, .navbar .navbar-toggler {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+    .navbar .navbar-toggler {
+        margin-top: 10px;
+    }
+}
+
+.messages-container {
+    position: fixed;
+    top: 60px; /* Adjust based on your navbar height */
+    right: 20px;
+    z-index: 1050; /* Ensure it appears above other elements */
+    width: auto;
+    max-width: 300px; /* Adjust as needed */
+}

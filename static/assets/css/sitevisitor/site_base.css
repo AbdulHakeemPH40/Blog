@@ -1,0 +1,209 @@
+/* General Styles */
+body {
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-fluid {
+    flex: 1;
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 25px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #007bff;
+    position: fixed;
+}
+
+.navbar .profile-picture {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+
+.navbar .dropdown-menu {
+    left: auto;
+    right: 0;
+}
+
+.dropdown-menu-right .dropdown-item {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-menu-right .dropdown-item i {
+    margin-right: 10px;
+}
+
+/* Main Content */
+.layout-page {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    transition: padding 0.3s ease-in-out, width 0.3s ease-in-out;
+    overflow: auto;
+}
+
+.content-wrapper h2 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Card */
+.card-body {
+    margin-bottom: 20px; /* Adjust this value to set the gap between card-body sections */
+}
+
+.card-body:last-child {
+    margin-bottom: 0; /* Remove margin for the last card-body section */
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #ddd;
+    padding: 20px 0;
+    width: 100%;
+    border-top: 2px solid #444;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+
+.card-img, .card-img-top {
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
+    border-radius: 25px;
+}
+
+
+/* Profile */
+.navbar .profile-picture, .navbar-brand img {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+
+/* Media Queries for Responsive Design */
+@media (min-width: 1024px) {
+    /* Adjustments for large screens (e.g., desktops) */
+    .layout-wrapper {
+        flex-direction: row;
+    }
+
+    .layout-page {
+        margin-left: 0;
+    }
+
+    .content-wrapper {
+        padding: 20px;
+    }
+
+    .card {
+        margin-bottom: 20px;
+        border-radius: 25px;
+
+    }
+}
+
+card-img, .card-img-bottom {
+    border-bottom-right-radius: calc(.25rem - 1px);
+    border-bottom-left-radius: calc(.25rem - 1px);
+    border-bottom-left-radius: 25px;
+}
+
+@media (max-width: 1023px) {
+    /* Hide menu and adjust content for smaller screens */
+    #layout-menu {
+        display: none;
+    }
+
+    .layout-menu-toggle {
+        display: block;
+    }
+
+    .layout-page {
+        margin: 0;
+    }
+
+    .content-wrapper {
+        padding: 10px;
+    }
+}
+
+/* General Styles */
+.start-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0041c4; /* Change to desired background color */
+    color: #fff;
+    padding: 50px 50px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    text-align: center;
+    flex-direction: column;
+}
+
+.start-content {
+    max-width: 800px;
+}
+
+.start-heading {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.start-subheading {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.start-button {
+    background-color: #fff;
+    color: #0041c4;
+    border: none;
+    padding: 15px 15px;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.start-button:hover {
+    background-color: #e6e6e6;
+}
+
+.start-note {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
